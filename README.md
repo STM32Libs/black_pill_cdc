@@ -5,6 +5,9 @@ in STM32CubeMX
 * Middleware : Class For FS IP, Virtual Port Com
 * GPIO PC13 as output for LED
 
+## Fixing ST-Link debug problem
+* Edit configuration / Debugger / Show generator options => Software System Reset
+
 ## Fixing USB port error
 * Error : Unable to open connection to COMX Unable to configure serial port
 * Fix applied in this repo in `USB_DEVICE\App\usbd_cdc_if.c` : https://community.st.com/s/question/0D50X00009Xke3ESAR/usb-vcp-windows-10
