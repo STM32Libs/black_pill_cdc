@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "usb_device.h"
+#include "usbd_cdc_if.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -96,6 +97,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);
+	  HAL_Delay(1000);
+	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+	  HAL_Delay(1000);
+	  CDC_Transmit_FS("Hello test from Black pill\r\n",28);
 
     /* USER CODE BEGIN 3 */
   }
